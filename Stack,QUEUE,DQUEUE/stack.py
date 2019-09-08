@@ -1,43 +1,45 @@
 class Stack(object):
 
-	def __init__(self):
+	def __init__(self,size):
 		self.items=[]
+		self.size =size
 
 
 	def push(self,data):
-		self.items.append(data)
-		print(data,"has pushed")
+		if len(self.items) < self.size: 
+			self.items.append(data)
+			print(data,"has pushed")
+		else:
+			print("Stack is full")
+
 
 	def pop(self):
 		self.items.pop()
-		print("Poped")
+		print("Element has been poped")
 
 
 	def isempty(self):
 		print(len(self.items)==0)
 
+	def isfull(self):
+		print(len(self.items) ==self.size)
+
 	def peek(self):
 		print(self.items[len(self.items)-1])
 
-	def size(self):
-		print(len(self.items))
 
 	def display(self):
-		print(self.items)
+		for i in self.items[::-1]:
+			print("|****|")
+			print("|",i,"|")
+		
 
+size = int(input("How many elemtns you want to enter in your stack"))
+stack = Stack(size)
 
-
-
-vinay = Stack()
-
-vinay.push(2)
-vinay.push(3)
-vinay.push("Hello")
-vinay.display()
-vinay.pop()
-vinay.isempty()
-vinay.pop()
-vinay.pop()
-vinay.display()
-vinay.isempty()
-
+stack.push(10)
+stack.push(30)
+stack.push(22)
+stack.pop()
+stack.display()
+stack.isfull()
