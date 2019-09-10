@@ -1,13 +1,10 @@
 def balance_check(s):
     
-    # Check is even number of brackets
     if len(s)%2 != 0:
         return False
     
-    # Set of opening brackets
     opening = set('([{') 
     
-    # Matching Pairs
     matches = set([ ('(',')'), ('[',']'), ('{','}') ]) 
     
     stack = []
