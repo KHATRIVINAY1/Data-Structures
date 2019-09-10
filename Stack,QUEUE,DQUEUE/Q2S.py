@@ -14,6 +14,3 @@ class Queue2Stack(object):
 				self.outstack.append(self.instack.pop())
 
 		return self.outstack.pop()
-
-
-		
