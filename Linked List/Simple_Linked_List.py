@@ -25,7 +25,7 @@ class Linked_List():
 
 		while self.k:
 
-			print(self.k.data)
+			print(self.k.data`)
 			self.k= self.k.next
 
 
