@@ -1,17 +1,3 @@
-def revers(node):
-	temp=node
-	m1= node
-	m2= node
-
-
-	while temp.nextnode != None:
-		temp = temp.nextnode
-		m2 = temp
-		k = m2
-		m2.nextnode= m1
-		m1 = m2
-		m2 = k
-
 
 def reverse(head):
 	current = head
